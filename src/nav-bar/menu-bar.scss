@@ -1,0 +1,92 @@
+.navbar {
+    .navbar-brand {
+        transition: .2s linear;
+    }
+
+    .navbar-brand:hover {
+        transform: scale(1.05);
+    }
+
+    a:hover span {
+        color: #FFC839 !important;
+    }
+
+    a:hover .categorys path {
+        animation: scale-anim .5s;
+    }
+
+    a:hover .contact-us,
+    a:hover .buy-basket {
+        animation: shake 0.5s;
+    }
+
+    a:hover .app-contact path {
+        stroke: #FFC839;
+        fill: #FFC839;
+    }
+
+    a:hover .app-contact {
+        transform: scale(1.2);
+        transition: all .9;
+    }
+
+    @keyframes scale-anim {
+        0% {
+            transform: scaleX(1);
+        }
+
+        50% {
+            transform: scaleX(1.3);
+        }
+
+        100% {
+            transform: scaleX(1);
+        }
+    }
+
+    @keyframes shake {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        10% {
+            transform: rotate(-10deg);
+        }
+
+        20% {
+            transform: rotate(10deg);
+        }
+
+        30% {
+            transform: rotate(0deg);
+        }
+
+        40% {
+            transform: rotate(10deg);
+        }
+
+        50% {
+            transform: rotate(-10deg);
+        }
+
+        60% {
+            transform: rotate(0deg);
+        }
+
+        70% {
+            transform: rotate(-10deg);
+        }
+
+        80% {
+            transform: rotate(10deg);
+        }
+
+        90% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(-10deg);
+        }
+    }
+}

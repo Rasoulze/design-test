@@ -1,0 +1,161 @@
+@import '~bootstrap/scss/bootstrap';
+
+$ligth-gray : #b4b4b4;
+
+.ligth-gray {
+  color: $ligth-gray;
+}
+
+@media only screen and (min-width: 992px) {
+  * {
+    font-size: 13px;
+  }
+
+  .slider-panel {
+    svg {
+      height: 45rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  * {
+    font-size: 14px;
+  }
+
+  .slider-panel {
+    svg {
+      height: 48rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  * {
+    font-size: 15px;
+  }
+
+  .slider-panel {
+    svg {
+      height: 49.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  * {
+    font-size: 16px;
+  }
+
+  .slider-panel {
+    svg {
+      height: 51rem;
+    }
+  }
+}
+
+.background-panel {
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(255, 125, 5);
+  background: linear-gradient(129deg, rgba(255, 125, 5, 0.24693627450980393) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(255, 125, 5, 0.24693627450980393) 100%);
+
+  .slider-panel {
+    svg {
+      overflow: hidden;
+      width: 100%;
+    }
+  }
+
+  .front-panel {
+    background-color: white;
+    border-radius: 30px;
+
+  }
+
+  .burger-panel {
+    top: 40%;
+    right: 17%;
+
+    .back-burger {
+      top: -4rem;
+    }
+
+    .front-burger {
+      transform: scaleX(-1);
+    }
+
+    img {
+      width: 110%;
+    }
+  }
+
+  .hand-like {
+    height: 60%;
+    width: 80%;
+    right: 0;
+    top: 40%;
+    overflow: hidden;
+
+    img {
+      left: -20rem;
+      top: -10rem;
+      width: 100rem;
+      transform: rotate(15deg);
+    }
+  }
+
+  .slider-menu {
+    bottom: 3%;
+    right: 15%;
+
+    a {
+      position: relative;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: .9rem;
+      font-weight: 600;
+      padding-bottom: .2rem;
+    }
+
+    a:after {
+      content: "";
+      position: absolute;
+      bottom: -.2rem;
+      left: .3rem;
+      width: 100%;
+      height: 2px;
+      visibility: hidden;
+      background-color: white;
+      transition: all ease-in .1s;
+
+    }
+
+    a:hover:after {
+      bottom: 0;
+      left: 0;
+      visibility: visible;
+
+    }
+
+    a:nth-child(2) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+button:hover {
+  background-color: black !important;
+}
+
+.nav-button {
+  width: 11rem;
+  height: 4.5rem;
+  border: none;
+  border-top-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}

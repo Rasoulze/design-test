@@ -1,0 +1,176 @@
+.body {
+    .location {
+        span:nth-child(5) {
+            color: #1bcf92;
+        }
+    }
+
+    .search {
+        input {
+            height: 4.5rem;
+            border-top-right-radius: 3rem;
+            border-bottom-left-radius: 3rem;
+            border-top-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            border: 1px lightgray solid;
+        }
+
+        input::placeholder {
+            font-size: 1.25rem;
+        }
+
+        button {
+            width: 11rem;
+            height: 4.5rem;
+            border: none;
+            border-top-right-radius: 3rem;
+            border-bottom-left-radius: 3rem;
+            border-top-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+        }
+    }
+
+    .popular-items {
+        cursor: pointer;
+
+        .item {
+            overflow: hidden;
+            position: relative;
+            width: 6.7rem;
+            height: 9.7rem;
+            margin-right: 1rem;
+            margin-left: 1rem;
+            z-index: 0;
+            border-top-left-radius: 3.25rem;
+            border-top-right-radius: 3.25rem;
+            border-bottom-left-radius: 3.25rem;
+            border-bottom-right-radius: 3.25rem;
+        }
+
+        .item-content {
+            position: relative;
+            height: calc(100% - .25rem);
+            width: calc(100% - .25rem);
+            z-index: 1;
+            border-top-left-radius: 3.25rem;
+            border-top-right-radius: 3.25rem;
+            border-bottom-left-radius: 3.25rem;
+            border-bottom-right-radius: 3.25rem;
+            background-color: #F0F0F0;
+            top: .13rem;
+            left: .14rem;
+        }
+
+        .item:hover.item:after {
+            content: "";
+            position: absolute;
+            z-index: -2;
+            left: -50%;
+            top: -50%;
+            width: 200%;
+            height: 200%;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: 50% 50%, 50% 50%;
+            background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+            background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 5%, rgba(255, 200, 57, 1) 49%, rgba(0, 0, 0, 0) 96%);
+            -webkit-animation: rotate 2s linear infinite;
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .item:hover .item-content {
+            background-color: #bdbdbd;
+            transition: all .5s linear;
+        }
+
+        .item-svg {
+            display: flex;
+            align-items: center;
+
+            svg {
+                height: 5rem;
+            }
+        }
+    }
+
+    .pre-orders-items {
+        .item {
+            cursor: pointer;
+            position: relative;
+            border-top-right-radius: 4rem;
+            border-top-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            border-bottom-left-radius: 4rem;
+            overflow: hidden;
+
+            .front-shadow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 12rem;
+                width: 20rem;
+                background: rgb(0, 0, 0);
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.07886904761904767) 22%, rgba(0, 0, 0, 0.4682247899159664) 86%);
+            }
+
+            :hover .front-shadow {
+                background: rgb(0, 0, 0);
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 22%, rgba(0, 0, 0, 0.6) 86%);
+            }
+
+            img {
+                height: 12rem;
+                width: 20rem;
+            }
+
+            .item-rate {
+                top: 65%;
+                left: 10%;
+
+                img {
+                    border-top-right-radius: 1.5rem;
+                    border-top-left-radius: .75rem;
+                    border-bottom-right-radius: .75rem;
+                    border-bottom-left-radius: 1.5rem;
+                    width: 2.7rem;
+                    height: 2.7rem;
+                }
+            }
+        }
+    }
+
+    .drop-down-result {
+        overflow: hidden auto;
+        margin-top: .5rem;
+        max-height: 15rem;
+        background-color: white;
+        border: 1px solid lightgray;
+        z-index: 99;
+
+        .meal-list {
+            .meal-item {
+                cursor: pointer;
+                border-bottom: 1px solid lightgray;
+
+                .meal-item-catogory {
+                    color: rgb(255, 115, 0);
+                    font-size: .75rem;
+                }
+            }
+
+            :hover {
+                background-color: lightgoldenrodyellow;
+            }
+
+            .meal-item:last-child {
+                border-bottom: none
+            }
+        }
+    }
+}
